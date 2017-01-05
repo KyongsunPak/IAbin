@@ -1,7 +1,7 @@
-#' Plotting N-T plane to find appropriate timing for conducting an interim analysis for binary outcome
+#' Plotting N-T Plane for Decision of Performing an Interim Analysis
 #'
 #' The package plots N-T plane for finding the appropriate timing for conducting an interim analysis in a randomized control trial.
-#' The functions for interim analysis expecting early stopping for superiroity and futility are prepared respectively.
+#' The functions for interim analysis expecting early stopping for superiority and futility are prepared respectively.
 #'
 #'
 #' @usage
@@ -12,7 +12,7 @@
 #'             main = "N-T plot",
 #'             lty = 1,...)
 #'             
-#' @param p0              Expected response rate for the control arm: scalar or vecotr. the value between 0 to 1.
+#' @param p0              Expected response rate for the control arm: scalar or vector. the value between 0 to 1.
 #' @param M               Total number of patients: expected number of patients until last time.
 #' @param q               Allocation ratio of the treatment arm: the value between 0 to 1.
 #' @param alpha1          Critical alpha at an interim analysis.
@@ -20,19 +20,18 @@
 #' @param ylab            Label name for y-axis in N-T plot.
 #' @param col             Line color. Default is "blue". For multiple p0, set the same length of color with p0.
 #' @param main            Main title in N-T plot.
-#' @param lty             Line type. The defalut is 1 for early stopping for superiority. 
-#' @param ...             Other graphics pararmeters
+#' @param lty             Line type. The default is 1 for early stopping for superiority. 
+#' @param ...             Other graphics parameters
 #' 
 #' @return A matrix or list with variable names \code{N}, \code{T}, \code{Z_score} and \code{P_val}.
 #' @return Draw N-T plot for early stopping for futility
 #' @return \item{x axis:}{N (Total number of patients at interim analysis)}
-#' @return \item{y axis:}{T (Total number of responders at interin analysis)}
+#' @return \item{y axis:}{T (Total number of responders at interim analysis)}
 #' @details For more details, please refer to the vignette: \code{browseVignettes(package = "IAbin")}
-#' @seealso
 #'  
 #'  
 #' @references
-#' Finding the Appropriate Timing for Interim Analysis
+#' Decision of Performing Interim Analysis for Comparative Clinical Trials
 #'  
 #' 
 #' @examples
@@ -139,7 +138,7 @@ NT_plane_sup = function(p0, M, q, alpha1){
   }
   
   M0 = M*(1-q)
-  z1 = qnorm(1 - alpha1 / 2)
+  z1 = qnorm(1 - alpha1/2, 0, 1)
   
   ## Calculate the expected z score for each T.
   reslist = list(NA)
@@ -171,7 +170,7 @@ NT_plane_sup = function(p0, M, q, alpha1){
     Tmin = min(vec$T, na.rm = T)
     N01 = round(i / (1 - q))
     z_score = min(vec$z_stat, na.rm = T)
-    p_val = 2 * (1 - pnorm(z_score))
+    p_val = 2 * (1 - pnorm(z_score, 0, 1))
     res_plane[i, ] = c(N01, Tmin, z_score, p_val)
   }
   options(warn = -1)

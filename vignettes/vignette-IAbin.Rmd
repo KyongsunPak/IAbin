@@ -1,10 +1,13 @@
 ---
-title: "|-"
-  Vignette for IAbin package:
-  Plotting N-T plane to find appropriate timing
-  for conducting an interim analysis for binary outcome
-author: "Kyongsun Pak"
-date: "February 01, 2016"
+title: "Vignette for **IAbin package**:\\
+
+Plotting N-T Plane for Decision of \\
+
+Performing an Interim Analysis"
+author: "*Kyongsun Pak* \\
+
+Kitasato Unversity"
+date: "*January 05, 2017*"
 output: pdf_document
 vignette: |
   %\VignetteIndexEntry{Vignette Title} %\VignetteEngine{knitr::knitr} %\VignetteEncoding{UTF-8}

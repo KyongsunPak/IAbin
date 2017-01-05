@@ -1,6 +1,6 @@
 #'  IAbin
 #'  
-#'  Plotting N-T plane to find appropriate timing for conducting an interim analysis for binary outcome
+#'  Plotting N-T Plane for Decision of Performing an Interim Analysis
 #'  
 #'  @alias IAbin
 #'  @docType package
@@ -16,7 +16,7 @@
 #'  Package: \tab IAbin\cr
 #'  Type: \tab Package\cr
 #'  Version: \tab 1.0\cr
-#'  Date: \tab 2016-02-01\cr
+#'  Date: \tab 2017-01-05\cr
 #'  License: \tab GPL-2\cr
 #'  Please check the vignette for details: \code{browseVignettes(package = "IAbin")}
 #'  }
@@ -24,7 +24,7 @@
 #'  @author Kyongsun Pak
 #'  Maintainer: Kyongsun Pak <pakk@pharm.kitasato-u.ac.jp>
 #'  
-#'  @references Finding the Appropriate Timing for Interim Analysis
+#'  @references Decision of Performing Interim Analysis for Comparative Clinical Trials
 #'  
 #'  @examples
 #'  #--- Settings for expected trial design ---#
@@ -43,3 +43,4 @@
 #'  plotNT.fut(p0, M, q, alpha1, cp1, col=col) 
 #'  
 #'  @name IAbin
+#'  @import stats, graphics

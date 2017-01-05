@@ -1,8 +1,8 @@
 Package: IAbin
 Type: Package
-Title: Plotting N-T plane to find appropriate timing for conducting an interim analysis for binary outcome
+Title: Plotting N-T Plane for Decision of Performing an Interim Analysis
 Version: 1.0
-Date: 2016-02-01
+Date: 2017-01-05
 Author: Kyongsun Pak
 Maintainer: Kyongsun Pak <pakk@pharm.kitasato-u.ac.jp>
 Description: In randomized-controlled trials, interim analyses are often planned for possible early termination 
@@ -14,6 +14,7 @@ Description: In randomized-controlled trials, interim analyses are often planned
    With this tool, investigators may skip some of the planned interim analyses when the interim result at that time point 
    unlikely supports early termination of the trial for superiority or futility of the new treatment.
 License: GPL (>= 2)
-VignetteBiuilder: knitr
+VignetteBuilder: knitr
 RoxygenNote: 5.0.1
-suggests: testthat, evaluate, knitr
+Suggests: testthat, evaluate, knitr
+

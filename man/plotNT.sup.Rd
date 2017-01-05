@@ -2,7 +2,7 @@
 % Please edit documentation in R/plotNTsup.R
 \name{plotNT.sup}
 \alias{plotNT.sup}
-\title{Plotting N-T plane to find appropriate timing for conducting an interim analysis for binary outcome}
+\title{Plotting N-T Plane for Decision of Performing an Interim Analysis}
 \usage{
 plotNT.sup(p0, M, q, alpha1, 
             xlab = "N: Number of patients at interim analysis", 
@@ -12,7 +12,7 @@ plotNT.sup(p0, M, q, alpha1,
             lty = 1,...)
 }
 \arguments{
-\item{p0}{Expected response rate for the control arm: scalar or vecotr. the value between 0 to 1.}
+\item{p0}{Expected response rate for the control arm: scalar or vector. the value between 0 to 1.}
 
 \item{M}{Total number of patients: expected number of patients until last time.}
 
@@ -28,9 +28,9 @@ plotNT.sup(p0, M, q, alpha1,
 
 \item{main}{Main title in N-T plot.}
 
-\item{lty}{Line type. The defalut is 1 for early stopping for superiority.}
+\item{lty}{Line type. The default is 1 for early stopping for superiority.}
 
-\item{...}{Other graphics pararmeters}
+\item{...}{Other graphics parameters}
 }
 \value{
 A matrix or list with variable names \code{N}, \code{T}, \code{Z_score} and \code{P_val}.
@@ -39,11 +39,11 @@ Draw N-T plot for early stopping for futility
 
 \item{x axis:}{N (Total number of patients at interim analysis)}
 
-\item{y axis:}{T (Total number of responders at interin analysis)}
+\item{y axis:}{T (Total number of responders at interim analysis)}
 }
 \description{
 The package plots N-T plane for finding the appropriate timing for conducting an interim analysis in a randomized control trial.
-The functions for interim analysis expecting early stopping for superiroity and futility are prepared respectively.
+The functions for interim analysis expecting early stopping for superiority and futility are prepared respectively.
 }
 \details{
 For more details, please refer to the vignette: \code{browseVignettes(package = "IAbin")}
@@ -74,9 +74,6 @@ print(NT_s3)
 
 }
 \references{
-Finding the Appropriate Timing for Interim Analysis
-}
-\seealso{
-
+Decision of Performing Interim Analysis for Comparative Clinical Trials
 }
 
